@@ -1,0 +1,27 @@
+<header>
+  <h1>TODOS</h1>
+  <div class="input-group">
+    <input #inputTask type="text" 
+           autofocus
+           (keyup.enter)="addTask(); _newTaskText='';"
+           placeholder="What needs to be done?" 
+           [(ngModel)]="_newTaskText" 
+           class="form-control">
+    <span class="input-group-btn">
+    <button (click)="addTask()" class="btn btn-default">
+       Add
+    </button>
+    </span>
+  </div>
+</header>
+
+<section>
+  <ul class="list-group">
+    <li *ngFor="let task of _taskList"
+        class="list-group-item"
+    >
+      <app-task-details [_taskDetail]="task" (onDel)="deleteTask($event)">
+      </app-task-details>
+    </li>
+  </ul>
+</section>

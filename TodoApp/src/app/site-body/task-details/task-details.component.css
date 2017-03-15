@@ -1,0 +1,7 @@
+/*.glyphicon{
+    float: right;
+}*/
+span{
+    float: right;
+    cursor: pointer;
+}
