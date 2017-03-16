@@ -31,8 +31,8 @@ export class SiteBodyComponent implements OnInit {
   addTask(): void {
     const prom = this._todoAppApi.addNewTask(this._newTaskText);
     const source$ = Observable.fromPromise(prom);
-    source$.subscribe(() => {
-      this.getTaskList();
+    source$.subscribe((newTask) => {
+      this._taskList.push(newTask);
     });
   }
 
@@ -41,7 +41,10 @@ export class SiteBodyComponent implements OnInit {
     const prom = this._todoAppApi.deleteTask(id);
     const source$ = Observable.fromPromise(prom);
     source$.subscribe(() => {
-      this.getTaskList();
+      var index = this._taskList.findIndex((o)=>{
+        return o.Id === id;
+      });
+      this._taskList.splice(index, 1);
     });
   }
   

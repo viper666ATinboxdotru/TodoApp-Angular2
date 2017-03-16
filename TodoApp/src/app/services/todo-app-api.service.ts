@@ -41,7 +41,7 @@ addNewTask(taskText: string): Promise<TodoModel> {
           //good
 
           if (xhr.status == 201) {
-            resolve();
+            resolve(JSON.parse(this.response));
           }
           else {
             reject();
