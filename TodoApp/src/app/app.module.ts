@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
 import { SiteBodyComponent } from './site-body/site-body.component';
 import { TaskDetailsComponent } from "app/site-body/task-details/task-details.component";
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TaskDetailsComponent } from "app/site-body/task-details/task-details.co
     AppComponent,
     SiteHeaderComponent,
     SiteBodyComponent,
-    TaskDetailsComponent
+    TaskDetailsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
