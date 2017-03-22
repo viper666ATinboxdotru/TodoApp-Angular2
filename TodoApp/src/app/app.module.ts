@@ -13,6 +13,12 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { LoginComponent } from './login/login.component';
 
 
+//Routing
+import { RouterModule } from '@angular/router';
+import { TodoComponent } from './todo/todo.component';
+import { AppRoutingModule } from "app/app-routing/app-routing.module";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +26,15 @@ import { LoginComponent } from './login/login.component';
     SiteBodyComponent,
     TaskDetailsComponent,
     SpinnerComponent,
-    LoginComponent
+    LoginComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
+
   ],
   providers: [
     TodoAppApiService
