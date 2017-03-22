@@ -10,6 +10,7 @@ import { SiteHeaderComponent } from './site-header/site-header.component';
 import { SiteBodyComponent } from './site-body/site-body.component';
 import { TaskDetailsComponent } from "app/site-body/task-details/task-details.component";
 import { SpinnerComponent } from './spinner/spinner.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     SiteHeaderComponent,
     SiteBodyComponent,
     TaskDetailsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
