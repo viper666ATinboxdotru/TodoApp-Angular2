@@ -22,7 +22,7 @@ export class TodoAppApiService {
         }
       }
 
-      xhr.open("GET", "https://adtodolistwebapi.azurewebsites.net/api/todo", true);
+      xhr.open("GET", "https://http://adtodolistwebapinew.azurewebsites.net/api/todo", true);
       xhr.send()
     });
   }
@@ -49,7 +49,7 @@ addNewTask(taskText: string): Promise<TodoModel> {
         }
 
       }
-      xhr.open("POST", "https://adtodolistwebapi.azurewebsites.net/api/todo", true);
+      xhr.open("POST", "https://http://adtodolistwebapinew.azurewebsites.net/api/todo", true);
       // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(body);
@@ -72,7 +72,7 @@ addNewTask(taskText: string): Promise<TodoModel> {
         }
       }
 
-      xhr.open("DELETE", "https://adtodolistwebapi.azurewebsites.net/api/todo/" + taskId, true);
+      xhr.open("DELETE", "https://http://adtodolistwebapinew.azurewebsites.net/api/todo/" + taskId, true);
       xhr.send(null)
     });
 
